@@ -1,45 +1,33 @@
 {
-  "version": "1.0.0",
-  "name": "MGEN konnector",
-  "type": "node",
+  "version": "1.0.4",
+  "name": "MGEN",
+  "type": "konnector",
+  "language": "node",
+  "icon": "mgen.svg",
   "slug": "mgen",
-  "description": "MGEN konnector for Cozy",
-  "source": "git@github.com:cozy/cozy-konnector-mgen.git",
+  "source": "git@github.com:konnectors/cozy-konnector-mgen.git",
+  "editor": "Cozy",
+  "vendor_link": "https://www.mgen.fr",
+  "categories": ["insurance"],
   "fields": {
-    "save_folder": {
-      "doctype": "io.cozy.files",
-      "type": "folder"
+    "login": {
+      "type": "text"
     },
-    "account": {
-      "doctype": "io.cozy.accounts",
-      "account_type": "mgen",
-      "accountFormat": "login,password"
-    }
-  },
-  "locales": {
-    "fr": {
-      "description": "Récupère toutes vos factures MGEN",
-      "permissions": {
-        "bills": {
-          "description": "Utilisé pour sauvegarder les données de facturation"
-        },
-        "files": {
-          "description": "Utilisé pour sauvegarder les factures"
-        }
-      }
+    "password": {
+      "type": "password"
     },
-    "en": {
-      "description": "Retrieves all your MGEN invoices",
-      "permissions": {
-        "bills": {
-          "description": "Used to save billing data"
-        },
-        "files": {
-          "description": "Used to save invoices"
-        }
+    "advancedFields": {
+      "folderPath": {
+        "advanced": true,
+        "isRequired": false
       }
     }
   },
+  "data_types": [
+    "bill",
+    "certificate"
+  ],
+  "screenshots": [],
   "permissions": {
     "bank operations": {
       "description": "Required to link bills to bank operations",
@@ -60,7 +48,16 @@
     }
   },
   "developer": {
-    "name": "cozy",
+    "name": "Cozy Cloud",
     "url": "https://cozy.io"
+  },
+  "langs": ["fr"],
+  "locales": {
+    "fr": {
+      "short_description": "Récupère toutes vos factures MGEN"
+    },
+    "en": {
+      "short_description": "Retrieves all your MGEN invoices"
+    }
   }
 }
