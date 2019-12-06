@@ -61,11 +61,11 @@
   "locales": {
     "fr": {
       "short_description": "Récupère vos relevés de remboursements",
-      "long_description": "<p>Récupère les relevés de remboursement de votre assurance santé.</p><p>Si vous avez connecté le compte bancaire avec lequel vous effectuez vos dépenses de santé, ceci activera le suivi de remboursement dans l'application Cozy Banks.</p><p><font size=20>⚠</font> A noter : Vous devez avoir souscrit à l'abonnement \"relevés de prestations\" (gratuit), qui est désactivé par defaut dans <b>Mes infos > Gestion des abonnements</b>.</p>"
+      "long_description": "<p>Récupère les relevés de remboursement de votre assurance santé.</p><p>Si vous avez connecté le compte bancaire avec lequel vous effectuez vos dépenses de santé, ceci activera le suivi de remboursement dans l'application Cozy Banks.</p><p><font size=20>⚠</font> A noter : Vous devez avoir souscrit à l'abonnement \"relevés de prestations\" (gratuit), qui est désactivé par defaut dans <b>Mes infos > Gestion des abonnements</b>. Cela permet de recevoir vos relevés sous format PDF au lieu de format papier.</p>"
     },
     "en": {
       "short_description": "Fetch your reimbursment statements",
-      "long_description": "<p>This connector fetches your reimbursement statements for your complementary health insurance.</p><br><p>If you have connected the bank account with which you make your medical expenses, this will enable refund tracking in the Cozy Banks app.</p><p><font size=20>⚠</font> Note : You must have subscribed to the pdf bills options (which is deactivated by default, rather than paper : in Mes infos > Gestion des abonnements</p>"
+      "long_description": "<p>This connector fetches your reimbursement statements for your health insurance.</p><p>If you have connected the bank account with which you make your medical expenses, this will enable refund tracking in the Cozy Banks app.</p><p><font size=20>⚠</font> Note : You must have subscribed to the pdf bills options (which is deactivated by default) : in Mes infos > Gestion des abonnements</p>. This allows to receive your statements under the PDF format, rather than paper."
     }
   },
   "banksTransactionRegExp": "\\bmgen\\b",
