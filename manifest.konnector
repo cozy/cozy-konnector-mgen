@@ -60,8 +60,8 @@
   ],
   "locales": {
     "fr": {
-      "short_description": "Récupère vos relevés de remboursements et votre attestation",
-      "long_description": "<p>Récupère les relevés de remboursement de votre assurance santé ainsi que votre attestation, que ce soit pour le régime obligatoire ou le régime complémentaire.</p><p>Si vous avez connecté le compte bancaire avec lequel vous effectuez vos dépenses de santé, ceci activera le suivi de remboursement dans l'application Cozy Banks.</p><p><font size=20>⚠</font> A noter : Vous devez avoir souscrit à l'abonnement \"relevés de prestations\" (gratuit), qui est désactivé par defaut dans <b>Mes infos > Gestion des abonnements</b>. Cela permet de recevoir vos relevés sous format PDF au lieu de format papier.</p>"
+      "short_description": "Récupère dans votre Cozy les relevés de remboursements et vos attestations",
+      "long_description": "<p>Récupère dans votre Cozy les relevés de remboursement de votre assurance santé ainsi que vos attestations, que ce soit pour le régime obligatoire ou le régime complémentaire.</p><p>Active le suivi de vos remboursements de santé si vous utilisez Cozy Banks.</p><p><font size=20>⚠</font> A noter : Vous devez avoir activé l'abonnement gratuit \"relevés de prestations\", désactivé par defaut sur le <b>site de la MGEN Mes infos > Gestion des abonnements</b>. Cela permet de recevoir vos relevés sous format PDF au lieu de format papier.</p>"
     },
     "en": {
       "short_description": "Fetch your reimbursment statements",
