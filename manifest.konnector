@@ -61,7 +61,7 @@
   "locales": {
     "fr": {
       "short_description": "Récupère vos relevés de remboursements",
-      "long_description": "<p>Récupère les relevés de remboursement de votre assurance santé complémentaire.</p><p>Si vous avez connecté le compte bancaire avec lequel vous effectuez vos dépenses de santé, ceci activera le suivi de remboursement dans l'application Cozy Banks.</p><p><font size=20>⚠</font> A noter : Vous devez avoir souscrit à l'option documents en pdf qui est désactivée par defaut, plutôt que papier : dans <b>Mes infos > Gestion des abonnements</b></p>"
+      "long_description": "<p>Récupère les relevés de remboursement de votre assurance santé complémentaire.</p><p>Si vous avez connecté le compte bancaire avec lequel vous effectuez vos dépenses de santé, ceci activera le suivi de remboursement dans l'application Cozy Banks.</p><p><font size=20>⚠</font> A noter : Vous devez avoir souscrit à l'abonnement \"relevés de prestations \" (gratuit), qui est désactivé par defaut dans <b>Mes infos > Gestion des abonnements</b>.</p>"
     },
     "en": {
       "short_description": "Fetch your reimbursment statements",
