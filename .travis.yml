@@ -1,12 +1,13 @@
 language: node_js
 node_js:
-- '8'
+- '12'
 env:
   global:
-  - GH_USER_EMAIL="travis@example.org"
-  - GH_USER_NAME="cozy-bot"
   - DEPLOY_REPOSITORY="git@github.com:konnectors/cozy-konnector-mgen.git"
+  # REGISTRY_TOKEN(editor=cozy, app=mgen)
   - secure: M0xtVoQZzBNt25Rqi7U8gmKjmIywe1RV1PFWL7INZLeqL+9qVC/3M3Wol7ACESV4dGUuwdV9MvO6ajPBB1pe2UffTjwZFVMRIVT0BJt5yh5g+1GFEeUIwPhUuBL9vq4uJ9M3ZNCe5d3OkhyEyrJJijR1R6jDasoDgRaEwBvrOBu4XlsIwatSaxgAvf77ha29mesURfbNaN32S1syZJb1sgB7kEp2YgV2pI+zrLeL9/+cUtx76ScSFf3qBlsu87bkw0/hTusESGr+VZf2gvJyqw+cG3SiXsm9xcJu6uuRi5xRPWLP75581W4uZap+zCsT5nMteeVDXPZC2Dff+0sXlQED1mYacncuWGR/xXMjDXYmAlQbn7WODq9dEbYVpMdvXaKtMUQ6QOypX5QX2l4Krr1pQD3jEHvsjPs3XX1LtGWz5GmZejLHsKCBg/0/AdMkCNcOVrkH7tpj48n8uL9wpLwWY/3CBDnZoVbpIOhBIURz73z2Sfhr68QYssXtc+F5fH70qMJZlGHLXv1nDHDcv3iUNBZPxP9LhYVwgxWh+otZBr2hKVDnuHSZlm4sbkwQaGrKYQQ1NqyZj/d/1raUExiUL+m0WdurjQssFYlxaqU5UzZ0dScn7DfOmUgXmXm8xfWquNtQNTzo8Dc8sJjBx/6RDYZI2d/mS255IVLE/U8=
+  # MATTERMOST_HOOK_URL
+  - secure: lyB+z/DApGzqnQZ7ANDjCak3SZ5bqF86oHAYz7uWXqwSwLdWFuseeTGuGlYNS7XOTHNZ1V05kbn+1iWZcR9pC3Vye0t6iyTAmW+7UuY/IPycwCluXWfNdPvX1TaG6VF1oVUGrGlRmEYB499m1bs0EYSJWAERAnsL7ytF21CZnfgzPwlENuf2Pbzzu+YINtmlXRgJBKVsi8Ix7E1T7lGqAMeY94zTNLXNb0f2YvmWsDQN41acWuZFTvXq9U9brqehPkRA8QpBwAxQj/O/1rUR/KLkXQmjNXfPWB2up7zD899wEQu0GLuwYHKWqPcG0AytWLWfSXPW0ST0rf5HqD8OkajT8R2T4Iu+aLrStgoLH8j3W6yGJCel+DG6wLkgkKdkNKK1uRGvzVBzQCh6r4zNIA+69jpUESYpmQlBEtnusY9JCSe84ZupVYslWLA+IasiZrJir4xeu0apEGunqcNFJ2pHgykxlhVfcPxt0eoJJlm/iq6Hhe4naNRDT6HiQX6Z3dXLQ3VKkq3y/UK6jPUOhHF9JREKt74tRj3qcXI2YcWvj/YwfLhAYAw5RwXrKOPAeBhFCw2kViAksc/Wcibr2P5YraozlCzMFwt7AtMBb0mCa2brD5z1EMX0AfVuB8JyPD8qWvBoNzc2Hchas3pEzx0m8fWT078z4PXFZ1Cpofk=
 cache:
   yarn: true
   directories:
@@ -15,7 +16,6 @@ branches:
   except:
   - build
   - build-debug
-  - latest
 script:
 - yarn lint
 - yarn build
@@ -27,7 +27,7 @@ deploy:
     branch: master
 - provider: script
   skip-cleanup: true
-  script: DEPLOY_BRANCH=build yarn deploy && yarn cozyPublish
+  script: DEPLOY_BRANCH=build yarn deploy && yarn cozyPublish --postpublish mattermost
   on:
     tags: true
 before_install:

@@ -1,5 +1,5 @@
 {
-  "version": "1.9.0",
+  "version": "1.12.1",
   "name": "MGEN",
   "type": "konnector",
   "language": "node",
@@ -60,12 +60,12 @@
   ],
   "locales": {
     "fr": {
-      "short_description": "Récupère vos relevés de remboursement",
-      "long_description": "<p>Récupère les relévés de remboursement de votre assurance santé complémentaire.</p><br><p>Les documents relatifs au régime obligatoire ne sont pas récupérés.</p><br><p>Si vous avez connecté le compte bancaire avec lequel vous effectuez vos dépenses de santé, ceci activera le suivi de remboursement dans l'application Cozy Banks.</p><br><p>A noter : Vous devez avoir souscrit à l'option documents en pdf, plutôt que papier.</p>"
+      "short_description": "Récupère vos relevés de remboursements",
+      "long_description": "<p>Récupère les relévés de remboursement de votre assurance santé complémentaire.</p><br><p>Si vous avez connecté le compte bancaire avec lequel vous effectuez vos dépenses de santé, ceci activera le suivi de remboursement dans l'application Cozy Banks.</p><p>⚠ A noter : Vous devez avoir souscrit à l'option documents en pdf qui est désactivée par defaut, plutôt que papier : dans Mes infos > Gestion des abonnements</p>"
     },
     "en": {
-      "short_description": "Fetch your reimbursment statement",
-      "long_description": "<p>This connector fetches your reimbursement statements for your complementary health insurance.</p> <br><p>The documents related to the compulsory sickness scheme are not fetched.</p> <br><p>If you have connected the bank account with which you make your medical expenses, this will enable refund tracking in the Cozy Banks app.</p> <br><p>Note : You must have subscribed to the pdf bills options, rather than paper.</p>"
+      "short_description": "Fetch your reimbursment statements",
+      "long_description": "<p>This connector fetches your reimbursement statements for your complementary health insurance.</p><br><p>If you have connected the bank account with which you make your medical expenses, this will enable refund tracking in the Cozy Banks app.</p><p>⚠ Note : You must have subscribed to the pdf bills options (which is deactivated by default, rather than paper : in Mes infos > Gestion des abonnements</p>"
     }
   },
   "banksTransactionRegExp": "\\bmgen\\b",
