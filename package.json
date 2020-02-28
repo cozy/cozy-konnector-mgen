@@ -1,10 +1,10 @@
 {
   "name": "cozy-konnector-mgen",
-  "version": "1.12.1",
+  "version": "1.13.0",
   "description": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/konnectors/cozy-konnector-mgen.git"
+    "url": "git@github.com:konnectors/cozy-konnector-mgen.git"
   },
   "keywords": [],
   "author": "Cozy Cloud",
@@ -28,29 +28,28 @@
     "dev": "cozy-konnector-dev",
     "standalone": "cozy-konnector-standalone",
     "pretest": "npm run clean",
-    "test": "konitor testit .",
     "check": "konitor check .",
     "clean": "rm -rf ./data",
     "build": "webpack",
     "lint": "eslint --fix .",
-    "deploy": "git-directory-deploy --directory build/ --branch ${DEPLOY_BRANCH:-build} --repo=${DEPLOY_REPOSITORY:-git@github.com:konnectors/cozy-konnector-mgen.git}",
+    "deploy": "git-directory-deploy --directory build/ --branch ${DEPLOY_BRANCH:-build} --repo=${DEPLOY_REPOSITORY:-$npm_package_repository_url}",
     "cozyPublish": "cozy-app-publish --token $REGISTRY_TOKEN --build-commit $(git rev-parse ${DEPLOY_BRANCH:-build})",
     "travisDeployKey": "./bin/generate_travis_deploy_key"
   },
   "dependencies": {
-    "cozy-konnector-libs": "4.32.1",
+    "cozy-konnector-libs": "4.33.0",
     "moment": "2.24.0"
   },
   "devDependencies": {
-    "copy-webpack-plugin": "5.0.5",
-    "cozy-app-publish": "0.20.0",
-    "cozy-jobs-cli": "1.10.5",
-    "eslint-config-cozy-app": "1.3.3",
+    "copy-webpack-plugin": "5.1.1",
+    "cozy-app-publish": "0.20.2",
+    "cozy-jobs-cli": "1.12.0",
+    "eslint-config-cozy-app": "1.4.0",
     "git-directory-deploy": "1.5.1",
-    "husky": "3.1.0",
+    "husky": "4.2.1",
     "konitor": "0.10.3",
     "svgo": "1.3.2",
-    "webpack": "4.41.2",
+    "webpack": "4.41.5",
     "webpack-cli": "3.3.10"
   }
 }
